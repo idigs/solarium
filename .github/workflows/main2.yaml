@@ -1,0 +1,10 @@
+name: spack
+on: [ push, workflow_dispatch ]
+
+jobs:
+  job_one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: try to access build tree from main.yaml
+        run: |
+          cd git-2.43.0 && time make -j5
