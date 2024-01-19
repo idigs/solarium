@@ -8,21 +8,15 @@ jobs:
 
       - name: apt install dependencies
         run: |
-          sudo apt install -y \
-            libz-dev \
-            libssl-dev \
-            libcurl4-gnutls-dev \
-            libexpat1-dev \
-            gettext \
-            cmake \
-            gcc \
-            curl \
-            build-essential \
-            gcc \
-            bc \
-            bison \
-            flex \
-            libssl-dev \
-            libncurses5-dev \
-            libelf-dev
+          sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc curl xz
+
+      - name: download and extract source for git-scm
+        run: |
+          curl --output git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.43.0.tar.gz
+          tar xf ./git.tar.gz
+
+      - name:
+        run: |
+          ls -la
+          pwd
 
