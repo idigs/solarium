@@ -5,8 +5,24 @@ jobs:
   job_one:
     runs-on: ubuntu-latest
     steps:
-      - name: grab main project
-        uses: actions/checkout@v2
 
-      - name: run build script
-        run: sh ./build.sh
+      - name: apt install dependencies
+        run: |
+          sudo apt install -y \
+            libz-dev \
+            libssl-dev \
+            libcurl4-gnutls-dev \
+            libexpat1-dev \
+            gettext \
+            cmake \
+            gcc \
+            curl \
+            build-essential \
+            gcc \
+            bc \
+            bison \
+            flex \
+            libssl-dev \
+            libncurses5-dev \
+            libelf-dev
+
