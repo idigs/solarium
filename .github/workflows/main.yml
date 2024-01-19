@@ -8,7 +8,7 @@ jobs:
 
       - name: apt install dependencies
         run: |
-          sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc curl xz
+          sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc curl xz-utils
 
       - name: download and extract source for git-scm
         run: |
