@@ -15,6 +15,10 @@ jobs:
           curl --output git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.43.0.tar.gz
           tar xf ./git.tar.gz
 
-      - name:
+      - name: move to dir and time a build
         run: |
           cd git-2.43.0 && ./configure && time make -j5
+      
+      - name: do another build without cleaning the build tree and time it
+        run: |
+          time make -j5
