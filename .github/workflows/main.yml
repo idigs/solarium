@@ -19,5 +19,5 @@ jobs:
         run: |
           ls -la
           pwd
-          cat /proc/cpuinfo |grep CPU |wc -l
+          cat /proc/cpuinfo
           # cd git-2.43.0 && ./configure && time make -j4
