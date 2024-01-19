@@ -21,4 +21,4 @@ jobs:
       
       - name: do another build without cleaning the build tree and time it
         run: |
-          time make -j5
+          cd git-2.43.0 && time make -j5
